@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<p>
+  Sankaque is a multi-threaded, <a href="http://en.wikipedia.org/wiki/Priority_queue">priority queue</a> server.
+</p>
+
+<h2>How does Sankaque differ from other message queues such as Beanstalk, Sidekiq, RabbitMQ, etc.?</h2>
+<p>
+  The main difference is that every message requires a priority, and that priority determines where in the queue the message ends up.  
+</p>
+<p>
+  
+</p>
+<p>
+</p>
+
+<h2>How fast is it?</h2>
+<p>
+  Sankaque is written in C and the priority queue is implemented with a <a href="http://en.wikipedia.org/wiki/Binary_heap">binary heap</a>, which means the insert/delete operations' worst case time complexities are O(log n).
+</p>
+
+<h2>Use Cases</h2>
+<ul>
+  <li>
+    Prioritizing resource intensive background tasks.
+  </li>
+  <li>
+    Simplifying queue architectures that emulate a priority queue (usually by polling multiple queues).
+  </li>
+</ul>
+
+<h2>Install It</h2>
+<pre>
+$ wget https://github.com/chsonnu/sankaque/releases/tag/sankaque-0.1.0.tar.gz
+$ tar xzf sankaque-0.1.0.tar.gz
+$ cd sankaque-0.1.0
+$ make
+</pre>
+<h2>Run It</h2>
+<pre>
+$ ./sankaque -l 0.0.0.0 -p 12000 
+</pre>
+<h2>Play With It</h2>
+<pre>
+$ push
+$ push
+$ push
+$ print
+$ pop
+$ print
+</pre>
+<h2>Use It</h2>
+<pre>
+
+</pre>
+
+Built-in CLI.

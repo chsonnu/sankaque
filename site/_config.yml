@@ -1,0 +1,10 @@
+# Site settings
+title: Sankaque
+email: ccs@hexafoil.com
+description: Sankaque is a multi-threaded, priority queue server.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+# twitter_username: jekyllrb
+github_username: chsonnu
+# Build settings
+markdown: kramdown
